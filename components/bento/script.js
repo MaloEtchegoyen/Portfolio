@@ -12,7 +12,7 @@ Bento.format = function(data){
     const currentData = data[lang] || data.fr;
 
     if (currentData.title) {
-        html = html.replaceAll("{{mainTitle}}", currentData.title);
+        html = html.replaceAll("{{title}}", currentData.title);
     }
 
     let htmlCard = "";

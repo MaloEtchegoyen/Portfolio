@@ -9,18 +9,23 @@
   transition: color 1s linear;
   .detail__home {
     position: fixed;
-    bottom: 1rem;
-    background-color: var(--clr-sec);
-    border: solid 1px var(--clr-main);
-    padding: 0.5rem 2.5rem;
-    border-radius: 25px;
-    opacity: 0.5;
-    text-transform: uppercase;
+    top: 2rem;
+    background-color: var(--clr-main);
+    color: var(--clr-sec);
+    padding: .5rem;
+    text-align: center;
+    border-radius: 100%;
     font-family: var(--ff-main);
+    transition: color 1s linear, background-color 1s linear;
     &:hover {
-      opacity: 1;
+      background-color: var(--clr-sec);
+      color: var(--clr-main);
+      outline: solid 1px var(--clr-main);
     }
-    transition: color 1s linear, background-color 1s linear, border 1s linear;
+    .icon{
+      height: 2rem;
+      width: 2rem;
+    }
   }
   .detail__title {
     text-align: center;
