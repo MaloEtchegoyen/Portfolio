@@ -7,14 +7,38 @@ const templateSecteur = await templateSecteurFile.text();
 const templateInfoFile = await fetch("./components/detail/templateInfo.html");
 const templateInfo = await templateInfoFile.text();
 
+const uiTranslations = {
+  fr: {
+    btnUrl: "accéder au projet",
+    errUrl: "Erreur : Paramètres d'URL incomplets (id ou type manquant)",
+    errType: "Erreur : Type de projet inconnu",
+    errProject: "Erreur : Projet introuvable"
+  },
+  en: {
+    btnUrl: "view project",
+    errUrl: "Error: Incomplete URL parameters (missing id or type)",
+    errType: "Error: Unknown project type",
+    errProject: "Error: Project not found"
+  },
+  es: {
+    btnUrl: "ver proyecto",
+    errUrl: "Error: Parámetros de URL incompletos (falta id o tipo)",
+    errType: "Error: Tipo de proyecto desconocido",
+    errProject: "Error: Proyecto no encontrado"
+  }
+};
+
 let Detail = {};
 
-Detail.format = function(data) {
+Detail.format = function(data, currentLang) {
+    const lang = document.documentElement.lang || 'fr';
+    const ui = uiTranslations[lang] || uiTranslations.fr;
+
     let html = template;
     
     let buttonHTML = "";
     if (data.link && data.link.trim() !== "") { 
-        buttonHTML = `<a class="detail__btn" href="${data.link}" target="_blank">accéder au projet</a>`;
+        buttonHTML = `<a class="detail__btn" href="${data.link}" target="_blank">${ui.btnUrl}</a>`;
     }
 
     html = html.replaceAll("{{title}}", data.title)
@@ -23,15 +47,14 @@ Detail.format = function(data) {
                .replaceAll("{{image}}", data.image)
                .replaceAll("{{buttonProject}}", buttonHTML);
 
-
     let htmlImg = "";
     for (let i=0; i< (data.images).length; i++){
         let li = templateImage;
         li = li.replaceAll("{{image}}", data.images[i]);
         htmlImg += li;
     }
+    
     let htmlSec = "";
-
     for (let i=0; i< (data.secteurs).length; i++){
         let li = templateSecteur;
         li = li.replaceAll("{{secteur}}", data.secteurs[i]);
@@ -49,9 +72,12 @@ Detail.format = function(data) {
     return html;
 }
 
-Detail.render = function(where, data) {
+Detail.render = function(where, data, currentLang) {
     let node = document.querySelector(where);
     if (!node) return;
+
+    const lang = document.documentElement.lang || 'fr';
+    const ui = uiTranslations[lang] || uiTranslations.fr;
 
     const queryString = window.location.search; 
     const urlParams = new URLSearchParams(queryString);
@@ -59,25 +85,25 @@ Detail.render = function(where, data) {
     const projectType = urlParams.get('type');
 
     if (!projectId || !projectType) {
-        node.innerHTML = "<h1>Erreur : Paramètres d'URL incomplets (id ou type manquant)</h1>";
+        node.innerHTML = `<h1>${ui.errUrl}</h1>`;
         return;
     }
 
     const targetArray = data[projectType];
 
     if (!targetArray) {
-        node.innerHTML = "<h1>Erreur : Type de projet inconnu</h1>";
+        node.innerHTML = `<h1>${ui.errType}</h1>`;
         return;
     }
 
     const projectData = targetArray.find(projet => projet.id == parseInt(projectId));
 
     if (!projectData) {
-        node.innerHTML = "<h1>Erreur : Projet introuvable</h1>";
+        node.innerHTML = `<h1>${ui.errProject}</h1>`;
         return;
     }
 
-    node.innerHTML = Detail.format(projectData);
+    node.innerHTML = Detail.format(projectData, lang);
 }
 
 export { Detail };

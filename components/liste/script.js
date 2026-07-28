@@ -8,12 +8,23 @@ let LI = {};
 LI.format = function(data){
     let html = template;
 
+    let typeForUrl = data.detailType || "web";
+    let idForUrl = data.detailId || data.id;
+
+    html = html.replaceAll("{{title}}", data.title);
+
     let htmlLi = "";
     let total = 0;
 
-    for (let project of data){
+for (let project of data.items){
         let li = templateLi;
+
+        let typeForUrl = project.detailType || "graphic";
+        let idForUrl = project.detailId || project.id;
+
         li = li.replaceAll("{{id}}", project.id)
+                .replaceAll("{{detailId}}", idForUrl)
+                .replaceAll("{{detailType}}", typeForUrl)
                 .replaceAll("{{title}}", project.title)
                 .replaceAll("{{description}}", project.description)
                 .replaceAll("{{type}}", project.type)

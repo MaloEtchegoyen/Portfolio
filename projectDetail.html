@@ -9,16 +9,44 @@
     <link rel="icon" type="image/x-icon" href="./asset/avatar.png">  
   </head>
 <body>
-    <input type="checkbox" id="themeToggle" class="hidden-checkbox">
-    <div class="bg-layer bg-dark"></div>
-    <div class="bg-layer bg-light"></div>
-    <label for="themeToggle" class="toggle-button">Inverser</label>
+  
+      <select id="langSwitcher" class="langSwitcher">
+          <option value="fr">Français</option>
+          <option value="en">English</option>
+          <option value="es">Español</option>
+      </select>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script>
+
+      <input type="checkbox" id="themeToggle" class="hidden-checkbox">
+      <div class="bg-layer bg-dark"></div>
+      <div class="bg-layer bg-light"></div>
+      <label for="themeToggle" class="toggle-button" id="theme-icon-container"></label>
+      
     <span id="cursorFollower" class="cursorFollower"></span>
     <section class="content"></section>
     <script type="module">
         import { Detail } from "./components/detail/script.js";
-        import { DetailData } from "./data/detailData.js";
-        Detail.render(".content", DetailData);
+        import { translations } from "./data/detailData.js";
+
+        const langSwitcher = document.getElementById("langSwitcher");
+        const contentSection = document.querySelector(".content");
+        let currentLang = localStorage.getItem("lang") || "fr";
+        langSwitcher.value = currentLang;
+
+        function renderContent(lang) {
+            document.documentElement.lang = lang;
+            contentSection.innerHTML = "";
+            Detail.render(".content", translations[lang], lang);
+        }
+        
+        renderContent(currentLang);
+
+        langSwitcher.addEventListener("change", (e) => {
+            currentLang = e.target.value;
+            localStorage.setItem("lang", currentLang);
+            renderContent(currentLang);
+        });
     </script>
 </body>
 </html>

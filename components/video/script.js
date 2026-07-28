@@ -8,11 +8,21 @@ let Video = {};
 Video.format = function(data){
     let html = template;
 
+    html = html.replaceAll("{{title}}", data.title);
+
     let htmlVideo = "";
 
-    for (let project of data){
+    for (let project of data.items){
         let li = templateVideo;
-        li = li.replaceAll("{{id}}", project.id).replaceAll("{{title}}", project.title).replaceAll("{{image}}", project.image);
+        
+        let typeForUrl = project.detailType || "video";
+        let idForUrl = project.detailId || project.id;
+
+        li = li.replaceAll("{{id}}", project.id)                
+                .replaceAll("{{detailId}}", idForUrl)
+                .replaceAll("{{detailType}}", typeForUrl)
+                .replaceAll("{{title}}", project.title)
+                .replaceAll("{{image}}", project.image);
         htmlVideo += li;
     }
 

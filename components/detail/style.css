@@ -36,7 +36,7 @@
   }
   .detail__description {
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--ff-sec);
     width: 70vw;
     font-size: 1.5rem;
   }
@@ -46,12 +46,12 @@
     width: 10rem;
     text-align: center;
     font-family: var(--ff-main);
+    transition: color 1s linear, background-color 1s linear;
     &:hover {
       background-color: var(--clr-sec);
       color: var(--clr-main);
       outline: solid 1px var(--clr-main);
     }
-    transition: color 1s linear, background-color 1s linear;
   }
   .detail__labels {
     display: flex;

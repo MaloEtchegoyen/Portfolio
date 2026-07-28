@@ -10,3 +10,4 @@
 @import "../components/bento/style.css" layer(components);
 @import "../components/video/style.css" layer(components);
 @import "../components/footer/style.css" layer(components);
+@import "../components/about/style.css" layer(components);

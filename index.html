@@ -17,6 +17,12 @@
         </video>
       </div>
 
+    <select id="langSwitcher" class="langSwitcher">
+          <option value="fr">Français</option>
+          <option value="en">English</option>
+          <option value="es">Español</option>
+      </select>
+
       <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script>
 
       <input type="checkbox" id="themeToggle" class="hidden-checkbox">
@@ -29,28 +35,55 @@
       <section class="carousel-section" id="carousel-section"></section>
       <section class="list-section"></section>
       <section class="video-section"></section>
+      <section class="about-section"></section>
       <footer class="footer-section"></footer>
     </main>
     <script type="module">
         import { Cards } from "./components/carrousel/script.js";
-        import { GraphicData } from "./data/graphicData.js";
-        Cards.render(".carousel-section", GraphicData);
+        import { GraphicTranslations } from "./data/graphicData.js";
 
         import { Hero } from "./components/hero/script.js";
         import { HeroData } from "./data/heroData.js";
         Hero.render(".hero-section", HeroData);
 
+
         import { LI } from "./components/liste/script.js";
-        import { WebData } from "./data/webData.js";
-        LI.render(".list-section", WebData);
+        import { WebTranslations } from "./data/webData.js";
 
         import { Video } from "./components/video/script.js";
-        import { VideoData } from "./data/videoData.js";
-        Video.render(".video-section", VideoData);
+        import { VideoTranslations } from "./data/videoData.js";
+        
+        import { about } from "./components/about/script.js";
+        import { AboutData } from "./data/aboutData.js";
 
         import { Footer } from "./components/footer/script.js";
         import { FooterData } from "./data/footerData.js";
         Footer.render(".footer-section", FooterData);
+
+const langSwitcher = document.getElementById("langSwitcher");
+        let currentLang = localStorage.getItem("lang") || "fr";
+        langSwitcher.value = currentLang;
+
+        function renderContent(lang) {
+            document.documentElement.lang = lang;
+            document.querySelector(".carousel-section").innerHTML = "";
+            Cards.render(".carousel-section", GraphicTranslations[lang]);
+
+            document.querySelector(".list-section").innerHTML = "";
+            LI.render(".list-section", WebTranslations[lang]);
+
+            document.querySelector(".video-section").innerHTML = "";
+            Video.render(".video-section", VideoTranslations[lang]);
+
+            about.render(".about-section", AboutData);
+        }
+
+        renderContent(currentLang);
+        langSwitcher.addEventListener("change", (e) => {
+            currentLang = e.target.value;
+            localStorage.setItem("lang", currentLang);
+            renderContent(currentLang);
+        });
     </script>
   </body>
 </html>

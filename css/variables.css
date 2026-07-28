@@ -1,9 +1,9 @@
 @import url('https://api.fontshare.com/v2/css?f[]=tanker@400&display=swap');
-@import url('https://api.fontshare.com/v2/css?f[]=sora@300&display=swap');
+@import url('https://api.fontshare.com/v2/css?f[]=chillax@400&display=swap');
 
 :root{
     --ff-main : 'Tanker', 'Impact', sans-serif;
-    --ff-sec : 'Sora', 'Impact', sans-serif;
+    --ff-sec : 'Chillax', sans-serif;
 
     --clr-light: #f4f7e8;
     --clr-dark: #0e0e0e;

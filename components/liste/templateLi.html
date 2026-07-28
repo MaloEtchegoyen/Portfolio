@@ -1,5 +1,5 @@
 <li class="project">
-    <a class="project__detail" href="projectDetail.html?id={{id}}&type=web" aria-label="Afficher les détails du projet {{title}}"></a>
+    <a class="project__detail" href="projectDetail.html?id={{detailId}}&type={{detailType}}" aria-label="Afficher les détails du projet {{title}}"></a>
     <div class="project__top">
         <h3 class="project__title">{{title}}</h3>
         <label for="project__checkbox-{{id}}">
@@ -12,7 +12,7 @@
     <span class="project__info">{{type}}</span>
     <input type="checkbox" id="project__checkbox-{{id}}" class="project__checkbox">
     <div class="project__menu">
-        <a href="projectDetail.html?id={{id}}&type=web" aria-label="Afficher les détails du projet {{title}}">
+        <a href="projectDetail.html?id={{detailId}}&type={{detailType}}" aria-label="Afficher les détails du projet {{title}}">
             <img src="{{image}}" alt="visuel {{title}}" width="600" height="338">
         </a>
     </div>
