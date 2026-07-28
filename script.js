@@ -66,19 +66,34 @@ if (preloader) {
         if (video) {
             const anticipation = 1; 
             let transitionDeclenchee = false;
+            const unlockSite = () => {
+                if (transitionDeclenchee) return;
+                transitionDeclenchee = true;
+                
+                preloader.style.opacity = '0';
+                document.body.classList.remove('no-scroll');
+                document.body.classList.add('video-ended');
+                sessionStorage.setItem('animationJouee', 'true');
+                
+                setTimeout(() => {
+                    preloader.remove();
+                }, 400);
+            };
 
             video.addEventListener('timeupdate', () => {
-                if (!transitionDeclenchee && video.duration > 0 && (video.duration - video.currentTime) <= anticipation) {
-                    transitionDeclenchee = true;
-                    preloader.style.opacity = '0';
-                    document.body.classList.remove('no-scroll');
-                    document.body.classList.add('video-ended');
-                    sessionStorage.setItem('animationJouee', 'true');
-                    setTimeout(() => {
-                        preloader.remove();
-                    }, 400);
+                if (video.duration > 0 && (video.duration - video.currentTime) <= anticipation) {
+                    unlockSite();
                 }
             });
+
+            video.addEventListener('error', unlockSite);
+            video.addEventListener('stalled', unlockSite);
+            setTimeout(unlockSite, 5000); 
+
+        } else {
+            document.body.classList.remove('no-scroll');
+            document.body.classList.add('video-ended');
+            preloader.remove();
         }
     }
 }
