@@ -20,7 +20,7 @@
                 padding: 0;
                 flex-direction: row;
                 gap: 0;
-                height: 50vh;
+                height: 50dvh;
             }
             .video__play {
                 display: flex;

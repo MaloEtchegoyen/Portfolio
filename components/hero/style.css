@@ -1,6 +1,6 @@
 .hero {
   position: relative;
-  height: 120vh;
+  height: 120dvh;
   view-timeline-name: --hero-timeline;
   
 }
@@ -20,7 +20,7 @@
 .hero__sticky {
   position: sticky;
   top: 0;
-  height: 100vh;
+  height: 100dvh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -51,11 +51,11 @@
 
 @keyframes move-and-grow {
   0%   { transform: translateY(0) scale(1); }
-  20%  { transform: translateY(20vh) scale(1); }
-  40%  { transform: translateY(40vh) scale(5); }
-  60%  { transform: translateY(50vh) scale(10); }
-  80%  { transform: translateY(50vh) scale(50); }
-  100% { transform: translateY(50vh) scale(50); }
+  20%  { transform: translateY(20dvh) scale(1); }
+  40%  { transform: translateY(40dvh) scale(5); }
+  60%  { transform: translateY(50dvh) scale(10); }
+  80%  { transform: translateY(50dvh) scale(50); }
+  100% { transform: translateY(50dvh) scale(50); }
 }
 
 
@@ -64,7 +64,7 @@
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100vh;
+  height: 100dvh;
   z-index: 5000;
   display: flex;
   justify-content: center;
