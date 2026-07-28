@@ -138,6 +138,7 @@
         grid-template-rows: 100%;
         grid-template-columns: 100% 0%; 
         transition: grid-template-columns 0.5s ease-in-out;
+        min-height: 0;
     }
 
     .item-1 { --angle: -90deg; }
