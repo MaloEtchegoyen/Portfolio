@@ -22,7 +22,7 @@ const GraphicTranslations = {
         image: "./asset/happiness.jpg",
         link: "#",
         title: "Happiness",
-        description: "Visuel surréaliste et vibrant autour du thème de la joie"
+        description: "Visuel surréaliste autour du thème de la joie"
       },
       {
         id: 4,
@@ -65,28 +65,28 @@ const GraphicTranslations = {
         image: "./asset/stickers/illustrator/designWeb.png",
         link: "#",
         title: "Skills Stickers",
-        description: "Set of stickers made on Illustrator in the style of Mike Karolos"
+        description: "Set of stickers made in Illustrator in the style of Mike Karolos"
       },
       {
         id: 3,
         image: "./asset/happiness.jpg",
         link: "#",
         title: "Happiness",
-        description: "Surreal and vibrant visual around the theme of joy"
+        description: "Surreal visual around the theme of joy"
       },
       {
         id: 4,
         image: "./asset/BillieEilish/HTE.jpg",
         link: "#",
         title: "Billie Eilish Album Covers",
-        description: "Covers of various Billie Eilish albums made on Photoshop"
+        description: "Covers of various Billie Eilish albums made in Photoshop"
       },
       {
         id: 5,
         image: "./asset/stickers/photoshop/adaptabilité.jpg",
         link: "#",
         title: "Skills Stickers",
-        description: "Set of stickers in the style of Pierre-Paul Pariseau."
+        description: "Set of stickers made in Illustrator in the style of Pierre-Paul Pariseau."
       },
       {
         id: 6,
@@ -122,7 +122,7 @@ const GraphicTranslations = {
         image: "./asset/happiness.jpg",
         link: "#",
         title: "Happiness",
-        description: "Visual surrealista y vibrante en torno al tema de la alegría"
+        description: "Visual surrealista alrededor del tema de la alegría"
       },
       {
         id: 4,

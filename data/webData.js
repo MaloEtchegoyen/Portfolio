@@ -76,7 +76,7 @@ const WebTranslations = {
       {
         id: 4,
         title: "Moviethèque",
-        description: "'VOD' platform based on a database.",
+        description: '"VOD" platform based on a database.',
         type: "student project",
         image: "./asset/movietheque/movietheque.webp",
         link: "#"
@@ -107,7 +107,7 @@ const WebTranslations = {
       {
         id: 2,
         title: "Ombra Systems",
-        description: "Diseño, integración y desarrollo de principio a fin de un sitio web 'One Page' de una startup.",
+        description: 'Diseño, integración y desarrollo de principio a fin de un sitio web "One Page" de una startup.',
         type: "proyecto de estudiante",
         image: "./asset/ombraSystems/ombraSystems.webp",
         link: "#"
@@ -123,7 +123,7 @@ const WebTranslations = {
       {
         id: 4,
         title: "Moviethèque",
-        description: "Plataforma de 'VOD' apoyada en una base de datos.",
+        description: 'Plataforma de "VOD" apoyada en una base de datos.',
         type: "proyecto de estudiante",
         image: "./asset/movietheque/movietheque.webp",
         link: "#"

@@ -19,7 +19,7 @@ LI.format = function(data){
 for (let project of data.items){
         let li = templateLi;
 
-        let typeForUrl = project.detailType || "graphic";
+        let typeForUrl = project.detailType || "web";
         let idForUrl = project.detailId || project.id;
 
         li = li.replaceAll("{{id}}", project.id)

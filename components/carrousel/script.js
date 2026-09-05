@@ -1,4 +1,3 @@
-// components/carrousel/script.js
 const templateFile = await fetch("./components/carrousel/template.html");
 const template = await templateFile.text();
 const templateCardFile = await fetch("./components/carrousel/templateCard.html");

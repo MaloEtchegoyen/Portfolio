@@ -9,7 +9,7 @@ const translations = {
         secteurs: ["design", "développement"],
         infos: ["Figma", "HTML", "CSS", "Javascript"],
         images: ["./asset/ciaoKombucha/ciaoKombucha.webp", "./asset/ciaoKombucha/menthMainT.jpg", "./asset/ciaoKombucha/menthT.jpg", "./asset/ciaoKombucha/dragonSecD.jpg", "./asset/ciaoKombucha/infuD.jpg", "./asset/ciaoKombucha/fermT.jpg", "./asset/ciaoKombucha/filtreT.jpg"],
-        link: "https://www.behance.net/gallery/245125823/Ciao-Kombucha-redisign-web-UX-UI?platform=direct"
+        link: "https://www.behance.net/gallery/245125823/Ciao-Kombucha-redesign-web-UX-UI?platform=direct"
       },
       {
         id: 2,
@@ -56,7 +56,7 @@ const translations = {
       {
         id: 2,
         title: "Stickers Skills",
-        description: "Ce projet de design graphique a pour objectif d'illustrer mes compétences techniques et humaines (hard skills et soft skills) à travers une collection d'avatars et de stickers destinés à des supports numériques et imprimés. Je me suis appuyé sur l'univers de l'artistes Mike Karolos",
+        description: "Ce projet de design graphique a pour objectif d'illustrer mes compétences techniques et humaines (hard skills et soft skills) à travers une collection d'avatars et de stickers destinés à des supports numériques et imprimés. Je me suis appuyé sur l'univers de l'artiste Mike Karolos",
         type: "projet étudiant",
         secteurs: ["design"],
         infos: ["Illustrator"],
@@ -75,7 +75,7 @@ const translations = {
       },
       {
         id: 4,
-        title: "Covers Albums de Billie Eilish",
+        title: "Covers d'albums de Billie Eilish",
         description: "Réinterprétation visuelle de pochettes d'albums de l'artiste Billie Eilish dans le but de capter l'ambiance musicale de façon visuelle.",
         type: "projet personnel",
         secteurs: ["design"],
@@ -86,7 +86,7 @@ const translations = {
       {
         id: 5,
         title: "Stickers Skills",
-        description: "Ce projet de design graphique a pour objectif d'illustrer mes compétences techniques et humaines (hard skills et soft skills) à travers une collection d'avatars et de stickers destinés à des supports numériques et imprimés. Je me suis appuyé sur l'univers de l'artistes Pierre-Paul Pariseau.",
+        description: "Ce projet de design graphique a pour objectif d'illustrer mes compétences techniques et humaines (hard skills et soft skills) à travers une collection d'avatars et de stickers destinés à des supports numériques et imprimés. Je me suis appuyé sur l'univers de l'artiste Pierre-Paul Pariseau.",
         type: "projet étudiant",
         secteurs: ["design"],
         infos: ["Photoshop"],
@@ -129,7 +129,7 @@ const translations = {
         secteurs: ["design", "development"],
         infos: ["Figma", "HTML", "CSS", "Javascript"],
         images: ["./asset/ciaoKombucha/ciaoKombucha.webp", "./asset/ciaoKombucha/menthMainT.jpg", "./asset/ciaoKombucha/menthT.jpg", "./asset/ciaoKombucha/dragonSecD.jpg", "./asset/ciaoKombucha/infuD.jpg", "./asset/ciaoKombucha/fermT.jpg", "./asset/ciaoKombucha/filtreT.jpg"],
-        link: "https://www.behance.net/gallery/245125823/Ciao-Kombucha-redisign-web-UX-UI?platform=direct"
+        link: "https://www.behance.net/gallery/245125823/Ciao-Kombucha-redesign-web-UX-UI?platform=direct"
       },
       {
         id: 2,
@@ -249,7 +249,7 @@ const translations = {
         secteurs: ["diseño", "desarrollo"],
         infos: ["Figma", "HTML", "CSS", "Javascript"],
         images: ["./asset/ciaoKombucha/ciaoKombucha.webp", "./asset/ciaoKombucha/menthMainT.jpg", "./asset/ciaoKombucha/menthT.jpg", "./asset/ciaoKombucha/dragonSecD.jpg", "./asset/ciaoKombucha/infuD.jpg", "./asset/ciaoKombucha/fermT.jpg", "./asset/ciaoKombucha/filtreT.jpg"],
-        link: "https://www.behance.net/gallery/245125823/Ciao-Kombucha-redisign-web-UX-UI?platform=direct"
+        link: "https://www.behance.net/gallery/245125823/Ciao-Kombucha-redesign-web-UX-UI?platform=direct"
       },
       {
         id: 2,

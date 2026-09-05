@@ -151,13 +151,13 @@
         document.documentElement.lang = lang;
 
         document.querySelector(".carousel-section").innerHTML = "";
-        Cards.render(".carousel-section", GraphicTranslations[lang]);
+        Cards.render(".carousel-section", GraphicTranslations[lang], "graphic");
 
         document.querySelector(".list-section").innerHTML = "";
-        LI.render(".list-section", WebTranslations[lang]);
+        LI.render(".list-section", WebTranslations[lang], "web");
 
         document.querySelector(".video-section").innerHTML = "";
-        Video.render(".video-section", VideoTranslations[lang]);
+        Video.render(".video-section", VideoTranslations[lang], "video");
 
         document.querySelector(".about-section").innerHTML = "";
         about.render(".about-section", AboutData);
