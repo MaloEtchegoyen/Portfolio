@@ -41,7 +41,7 @@ const WebTranslations = {
         title: "Rock En Seine 2026 - Web Design",
         description: "Conception UI/UX et développement du site web pour le festival.",
         type: "projet étudiant",
-        image: "./asset/TeaserRockEnSeine2026/maquette-web.jpg",
+        image: "./asset/RockEnSeine2026/RockEnSeine.webp",
         link: "#"
       }
     ]
@@ -88,7 +88,7 @@ const WebTranslations = {
         title: "Rock En Seine 2026 - Web Design",
         description: "UI/UX design and website development for the festival.",
         type: "student project",
-        image: "./asset/TeaserRockEnSeine2026/maquette-web.jpg",
+        image: "./asset/RockEnSeine2026/RockEnSeine.webp",
         link: "#"
       }
     ]
@@ -135,7 +135,7 @@ const WebTranslations = {
         title: "Rock En Seine 2026 - Web Design",
         description: "Diseño UI/UX y desarrollo del sitio web para el festival.",
         type: "proyecto de estudiante",
-        image: "./asset/TeaserRockEnSeine2026/maquette-web.jpg",
+        image: "./asset/RockEnSeine2026/RockEnSeine.webp",
         link: "#"
       }
     ]
