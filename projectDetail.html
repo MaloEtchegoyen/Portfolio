@@ -3,54 +3,73 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta property="og:locale" content="fr_FR">
-    <meta property="og:locale:alternate" content="en_US">
-    <meta property="og:locale:alternate" content="es_ES">
-    <title>Portfolio : projet</title>
-    <meta name="robots" content="noindex, follow">
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta property="og:locale:alternate" content="es_ES" />
+    <title>Détail du projet | Portfolio Malo Etchegoyen</title>
+    <meta name="robots" content="index, follow" />
     <link rel="stylesheet" href="css/global.css" />
     <script src="script.js" defer></script>
-    <link rel="icon" type="image/x-icon" href="./asset/avatar.png">
+    <link rel="icon" type="image/png" href="./asset/avatar.png" />
   </head>
-<body>
-  
-      <select id="langSwitcher" class="langSwitcher">
-          <option value="fr">Français</option>
-          <option value="en">English</option>
-          <option value="es">Español</option>
-      </select>
+  <body>
+    <select id="langSwitcher" class="langSwitcher">
+      <option value="fr">Français</option>
+      <option value="en">English</option>
+      <option value="es">Español</option>
+    </select>
 
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script>
 
-      <input type="checkbox" id="themeToggle" class="hidden-checkbox">
-      <div class="bg-layer bg-dark"></div>
-      <div class="bg-layer bg-light"></div>
-      <label for="themeToggle" class="toggle-button" id="theme-icon-container"></label>
-      
+    <input type="checkbox" id="themeToggle" class="hidden-checkbox" />
+    <div class="bg-layer bg-dark"></div>
+    <div class="bg-layer bg-light"></div>
+    <label
+      for="themeToggle"
+      class="toggle-button"
+      id="theme-icon-container"
+    ></label>
+
     <span id="cursorFollower" class="cursorFollower"></span>
-    <section class="content"></section>
+    <section class="content">
+      <div class="seo-fallback">
+        <h1>Projet de Création Numérique | Malo Etchegoyen</h1>
+        <p>
+          Page de présentation de projet du portfolio de Malo Etchegoyen en
+          Webdesign, Web development, design et création numérique (Photoshop,
+          Illustrator, After Effects, Premiere Pro, Figma).
+        </p>
+        <a href="https://maloetchegoyen.github.io/Portfolio/"
+          >Retour à la page d'accueil du portfolio</a
+        >
+      </div>
+    </section>
     <script type="module">
-        import { Detail } from "./components/detail/script.js";
-        import { translations } from "./data/detailData.js";
+      import { Detail } from "./components/detail/script.js";
+      import { translations } from "./data/detailData.js";
 
-        const langSwitcher = document.getElementById("langSwitcher");
-        const contentSection = document.querySelector(".content");
-        let currentLang = localStorage.getItem("lang") || "fr";
-        langSwitcher.value = currentLang;
+      const langSwitcher = document.getElementById("langSwitcher");
+      const contentSection = document.querySelector(".content");
+      let currentLang = localStorage.getItem("lang") || "fr";
+      langSwitcher.value = currentLang;
 
-        function renderContent(lang) {
-            document.documentElement.lang = lang;
-            contentSection.innerHTML = "";
-            Detail.render(".content", translations[lang], lang);
-        }
-        
+      function renderContent(lang) {
+        document.documentElement.lang = lang;
+        contentSection.innerHTML = "";
+        Detail.render(".content", translations[lang], lang);
+        document.title = translations[lang].nomDuProjet + " | Malo Etchegoyen";
+        document
+          .querySelector('meta[name="description"]')
+          .setAttribute("content", translations[lang].resumeDuProjet);
+      }
+
+      renderContent(currentLang);
+
+      langSwitcher.addEventListener("change", (e) => {
+        currentLang = e.target.value;
+        localStorage.setItem("lang", currentLang);
         renderContent(currentLang);
-
-        langSwitcher.addEventListener("change", (e) => {
-            currentLang = e.target.value;
-            localStorage.setItem("lang", currentLang);
-            renderContent(currentLang);
-        });
+      });
     </script>
-</body>
+  </body>
 </html>

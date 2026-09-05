@@ -7,6 +7,7 @@
     padding: 2rem;
     color: var(--clr-main);
     transition: color 1s linear;
+    overflow: hidden;
 }
 
 #containerToggle, #textToggle {
@@ -15,10 +16,9 @@
 
 .container {
     width: 100%;
-    height: 70dvh;
-    min-height: fit-content;
+    min-height: max(70dvh, 45rem); /* Empêche la section de s'écraser sur petits écrans */
     display: grid;
-    grid-template-rows: 100% 0%; 
+    grid-template-rows: 1fr 0fr; 
     grid-template-columns: 100%;
     transition: grid-template-rows 0.5s ease-in-out;
 }
@@ -135,6 +135,7 @@
 
 @media (min-width: 75em) {
     .container {
+        height: 70dvh;
         grid-template-rows: 100%;
         grid-template-columns: 100% 0%; 
         transition: grid-template-columns 0.5s ease-in-out;
