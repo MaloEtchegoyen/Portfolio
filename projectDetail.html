@@ -57,10 +57,20 @@
         document.documentElement.lang = lang;
         contentSection.innerHTML = "";
         Detail.render(".content", translations[lang], lang);
-        document.title = translations[lang].nomDuProjet + " | Malo Etchegoyen";
-        document
-          .querySelector('meta[name="description"]')
-          .setAttribute("content", translations[lang].resumeDuProjet);
+        const urlParams = new URLSearchParams(window.location.search);
+        const projectId = urlParams.get("id");
+        const projectType = urlParams.get("type");
+        const currentProject = translations[lang]?.[projectType]?.find(
+          (p) => p.id == parseInt(projectId),
+        );
+
+        if (currentProject) {
+          document.title = `${currentProject.title} | Malo Etchegoyen`;
+          const metaDesc = document.querySelector('meta[name="description"]');
+          if (metaDesc) {
+            metaDesc.setAttribute("content", currentProject.description);
+          }
+        }
       }
 
       renderContent(currentLang);
