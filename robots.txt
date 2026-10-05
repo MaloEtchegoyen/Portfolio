@@ -1,0 +1,2 @@
+User-agent: Googlebot-Image
+Disallow: asset\about\me.jpg
