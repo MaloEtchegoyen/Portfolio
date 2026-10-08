@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- ACCUEIL -->
+  <url>
+    <loc>https://maloetchegoyen.github.io/Portfolio/</loc>
+    <lastmod>2026-10-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+
+  <url>
+    <loc>https://maloetchegoyen.github.io/Portfolio/graphique.html</loc>
+    <lastmod>2026-10-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- GRAPHIQUES -->
+  <url>
+    <loc>https://maloetchegoyen.github.io/Portfolio/projectDetail.html?id=1&amp;type=graphic</loc>
+    <lastmod>2026-10-06</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://maloetchegoyen.github.io/Portfolio/projectDetail.html?id=2&amp;type=graphic</loc>
+    <lastmod>2026-10-06</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://maloetchegoyen.github.io/Portfolio/projectDetail.html?id=3&amp;type=graphic</loc>
+    <lastmod>2026-10-06</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://maloetchegoyen.github.io/Portfolio/projectDetail.html?id=4&amp;type=graphic</loc>
+    <lastmod>2026-10-06</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://maloetchegoyen.github.io/Portfolio/projectDetail.html?id=5&amp;type=graphic</loc>
+    <lastmod>2026-10-06</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- VIDEO -->
+  <url>
+    <loc>https://maloetchegoyen.github.io/Portfolio/projectDetail.html?id=1&amp;type=video</loc>
+    <lastmod>2026-10-06</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- WEB -->
+  <url>
+    <loc>https://maloetchegoyen.github.io/Portfolio/projectDetail.html?id=1&amp;type=web</loc>
+    <lastmod>2026-10-06</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://maloetchegoyen.github.io/Portfolio/projectDetail.html?id=2&amp;type=web</loc>
+    <lastmod>2026-10-06</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://maloetchegoyen.github.io/Portfolio/projectDetail.html?id=3&amp;type=web</loc>
+    <lastmod>2026-10-06</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://maloetchegoyen.github.io/Portfolio/projectDetail.html?id=4&amp;type=web</loc>
+    <lastmod>2026-10-06</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- CAMPAIGNS -->
+  <url>
+    <loc>https://maloetchegoyen.github.io/Portfolio/projectDetail.html?id=1&amp;type=campaigns</loc>
+    <lastmod>2026-10-06</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+</urlset>
