@@ -154,5 +154,3 @@ themeToggle.addEventListener('change', () => {
     themeAnim.play();
   }
 });
-
-});
