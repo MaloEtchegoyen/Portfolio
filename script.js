@@ -64,11 +64,13 @@ if (preloader) {
         preloader.remove();
     } else {
         if (video) {
-            const anticipation = 1; 
             let transitionDeclenchee = false;
+            let fallbackTimeout = null;
+
             const unlockSite = () => {
                 if (transitionDeclenchee) return;
                 transitionDeclenchee = true;
+                if (fallbackTimeout) clearTimeout(fallbackTimeout);
                 
                 preloader.style.opacity = '0';
                 document.body.classList.remove('no-scroll');
@@ -80,8 +82,12 @@ if (preloader) {
                 }, 400);
             };
 
+            // Écoute de la fin normale de la vidéo
+            video.addEventListener('ended', unlockSite);
+
+            // Sécurité si l'événement ended tarde à se déclencher
             video.addEventListener('timeupdate', () => {
-                if (video.duration > 0 && (video.duration - video.currentTime) <= anticipation) {
+                if (video.duration > 0 && video.currentTime >= video.duration - 0.1) {
                     unlockSite();
                 }
             });
@@ -89,7 +95,23 @@ if (preloader) {
             video.addEventListener('error', unlockSite);
             video.addEventListener('stalled', unlockSite);
             preloader.addEventListener('click', unlockSite);
-            setTimeout(unlockSite, 2000); 
+
+            // Timeout de secours au cas où la vidéo ne charge pas ou bloque
+            fallbackTimeout = setTimeout(unlockSite, 6000);
+
+            // Si la lecture démarre, ajuster le timeout de secours selon la durée réelle
+            video.addEventListener('playing', () => {
+                clearTimeout(fallbackTimeout);
+                const remaining = video.duration ? (video.duration - video.currentTime + 1) * 1000 : 6000;
+                fallbackTimeout = setTimeout(unlockSite, remaining);
+            });
+
+            const playPromise = video.play();
+            if (playPromise !== undefined) {
+                playPromise.catch(() => {
+                    unlockSite();
+                });
+            }
 
         } else {
             document.body.classList.remove('no-scroll');
@@ -131,4 +153,6 @@ themeToggle.addEventListener('change', () => {
     themeAnim.setDirection(-1);
     themeAnim.play();
   }
+});
+
 });
