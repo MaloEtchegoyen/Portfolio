@@ -1,9 +1,11 @@
-const templateFile = await fetch("./components/about/template.html");
-const template = await templateFile.text();
-const templateSubjectFile = await fetch("./components/about/templateSubject.html");
-const templateSubject = await templateSubjectFile.text();
-const templateImageFile = await fetch("./components/about/templateImage.html");
-const templateImage = await templateImageFile.text();
+import template from "./template.html?raw";
+import templateSubject from "./templateSubject.html?raw";
+import templateImage from "./templateImage.html?raw";
+
+
+
+
+
 
 let about = {};
 

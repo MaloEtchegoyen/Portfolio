@@ -1,7 +1,8 @@
-const templateFile = await fetch("./components/carrousel/template.html");
-const template = await templateFile.text();
-const templateCardFile = await fetch("./components/carrousel/templateCard.html");
-const templateCard = await templateCardFile.text();
+import template from "./template.html?raw";
+import templateCard from "./templateCard.html?raw";
+
+
+
 
 let Cards = {};
 

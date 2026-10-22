@@ -1,7 +1,8 @@
-const templateFile = await fetch("./components/liste/template.html");
-const template = await templateFile.text();
-const templateLiFile = await fetch("./components/liste/templateLi.html");
-const templateLi = await templateLiFile.text();
+import template from "./template.html?raw";
+import templateLi from "./templateLi.html?raw";
+
+
+
 
 let LI = {};
 

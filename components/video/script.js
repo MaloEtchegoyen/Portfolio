@@ -1,7 +1,8 @@
-const templateFile = await fetch("./components/video/template.html");
-const template = await templateFile.text();
-const templateVideoFile = await fetch("./components/video/templateVideo.html");
-const templateVideo = await templateVideoFile.text();
+import template from "./template.html?raw";
+import templateVideo from "./templateVideo.html?raw";
+
+
+
 
 let Video = {};
 
