@@ -88,7 +88,8 @@ if (preloader) {
 
             video.addEventListener('error', unlockSite);
             video.addEventListener('stalled', unlockSite);
-            setTimeout(unlockSite, 5000); 
+            preloader.addEventListener('click', unlockSite);
+            setTimeout(unlockSite, 2000); 
 
         } else {
             document.body.classList.remove('no-scroll');

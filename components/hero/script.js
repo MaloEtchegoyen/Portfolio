@@ -1,5 +1,5 @@
-const templateFile = await fetch("./components/hero/template.html");
-const template = await templateFile.text();
+import template from "./template.html?raw";
+
 
 let Hero = {};
 

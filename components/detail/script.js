@@ -1,11 +1,14 @@
-const templateFile = await fetch("./components/detail/template.html");
-const template = await templateFile.text();
-const templateImageFile = await fetch("./components/detail/templateImage.html");
-const templateImage = await templateImageFile.text();
-const templateSecteurFile = await fetch("./components/detail/templateSecteur.html");
-const templateSecteur = await templateSecteurFile.text();
-const templateInfoFile = await fetch("./components/detail/templateInfo.html");
-const templateInfo = await templateInfoFile.text();
+import template from "./template.html?raw";
+import templateImage from "./templateImage.html?raw";
+import templateSecteur from "./templateSecteur.html?raw";
+import templateInfo from "./templateInfo.html?raw";
+
+
+
+
+
+
+
 
 const uiTranslations = {
   fr: {

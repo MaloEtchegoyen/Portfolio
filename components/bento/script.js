@@ -1,7 +1,8 @@
-const templateFile = await fetch("./components/bento/template.html");
-const template = await templateFile.text();
-const templateCardFile = await fetch("./components/bento/templateCard.html");
-const templateCard = await templateCardFile.text();
+import template from "./template.html?raw";
+import templateCard from "./templateCard.html?raw";
+
+
+
 
 let Bento = {};
 
