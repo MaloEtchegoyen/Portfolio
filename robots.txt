@@ -1,2 +1,7 @@
+User-agent: *
+Allow: /
+
 User-agent: Googlebot-Image
-Disallow: asset\about\me.jpg
+Disallow: /asset/about/me.jpg
+
+Sitemap: https://maloetchegoyen.github.io/Portfolio/sitemap.xml
